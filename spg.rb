@@ -12,13 +12,13 @@ class Spg < Formula
   def install
     print buildpath
     ENV["GOPATH"] = buildpath
-    imemo_path = buildpath/"src/github.com/kcwebapply/spg/"
-    imemo_path.install buildpath.children
+    spg_path = buildpath/"src/github.com/kcwebapply/spg/"
+    spg_path.install buildpath.children
 
-    cd imemo_path do
+    cd ispg_path do
       system "dep", "ensure", "-vendor-only"
       system "go", "build"
-      bin.install "imemo"
+      bin.install "spg"
     end
   end
 end
