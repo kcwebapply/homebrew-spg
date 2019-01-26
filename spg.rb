@@ -15,7 +15,7 @@ class Spg < Formula
     spg_path = buildpath/"src/github.com/kcwebapply/spg/"
     spg_path.install buildpath.children
 
-    cd ispg_path do
+    cd spg_path do
       system "dep", "ensure", "-vendor-only"
       system "go", "build"
       bin.install "spg"
