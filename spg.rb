@@ -15,9 +15,9 @@ class Spg < Formula
     spg_path.install buildpath.children
     app_path = ENV["GOPATH"]+/"src/github.com/kcwebapply/spg/"
     print spg_path
+    ENV["GOPATH"] = buildpath
 
     cd spg_path do
-      ENV["GOPATH"] = buildpath
       mkdir_p buildpath/"src/github.com/kcwebapply/spg/"
       system "dep", "ensure", "-vendor-only"
       system "go", "build"
