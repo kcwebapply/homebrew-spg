@@ -16,6 +16,7 @@ class Spg < Formula
     spg_path.install buildpath.children
 
     cd spg_path do
+      system "go", "get", "github.com/kcwebapply/spg"
       system "dep", "ensure", "-vendor-only"
       system "go", "build"
       bin.install "spg"
