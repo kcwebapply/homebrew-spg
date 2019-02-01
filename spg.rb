@@ -10,7 +10,6 @@ class Spg < Formula
   depends_on "go" => :build
 
   def install
-    print "gopath"+ENV["GOPATH"]
     system "go", "get", "github.com/kcwebapply/spg"
     ENV["GOPATH"] = buildpath
     spg_path = buildpath/"src/github.com/kcwebapply/spg/"
