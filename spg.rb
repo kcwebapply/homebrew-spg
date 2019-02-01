@@ -10,12 +10,14 @@ class Spg < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
+ 
     spg_path = buildpath/"src/github.com/kcwebapply/spg/"
     spg_path.install buildpath.children
+    app_path = ENV["GOPATH"]+/"src/github.com/kcwebapply/spg/"
     print spg_path
 
     cd spg_path do
+      ENV["GOPATH"] = buildpath
       mkdir_p buildpath/"src/github.com/kcwebapply/spg/"
       system "dep", "ensure", "-vendor-only"
       system "go", "build"
