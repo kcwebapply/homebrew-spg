@@ -4,8 +4,8 @@
 class Spg < Formula
   desc "Save memo easily on terminal"
   homepage "https://github.com/kcwebapply/spg"
-  url "https://github.com/kcwebapply/spg/archive/1.0.1.tar.gz"
-  sha256 "717dea11a8be772ef0222f4ece22eda28a3214b92b57854742b9ec5e23bbbcd6"
+  url "https://github.com/kcwebapply/spg/archive/1.0.2.tar.gz"
+  sha256 "ca4eb712933ee3fc0d6b3210b7120064d833493b72f634c18719300be5ebfeba"
   depends_on "dep" => :build
   depends_on "go" => :build
 
